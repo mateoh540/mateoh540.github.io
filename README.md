@@ -1,6 +1,6 @@
 # My Portfolio
 ## Table of Contents
-- [About](#about)
+- [About](#about.md)
 - [Projects](#projects)
 - [Contact](#contact)
 
