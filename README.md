@@ -1,14 +1,12 @@
-# My Portfolio
+# My Project Portfolio
 ## Table of Contents
-- [About](#about.md)
+- [About](#about)
 - [Projects](#projects)
-- [Contact](#contact)
-
 ## About
-Some text here.
+BASc in Mathematics and Engineering from Queen's University (2026)
 
 ## Projects
-Project info here.
+- [XPlanar Stereovision](#XPlanar.md)
+- [FLS Analysis](#FLS.md)
+- [PiSO Mounter](#PiSOMounter.md)
 
-## Contact
-Email here.
