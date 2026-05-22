@@ -6,7 +6,7 @@
 BASc in Mathematics and Engineering from Queen's University (2026)
 
 ## Projects
-- [XPlanar Stereovision](#XPlanar.md)
-- [FLS Analysis](#FLS.md)
-- [PiSO Mounter](#PiSOMounter.md)
+- [XPlanar Stereovision](#beckhoff_xplanar.md)
+- [FLS Analysis](#cellula_fls.md)
+- [PiSO Mounter](#astera_piso.md)
 
