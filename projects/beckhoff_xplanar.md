@@ -3,7 +3,7 @@
 ## Goal
 The primary objective of this project is to measure the 6-Degrees-of-Freedom (6DOF) pose of a Beckhoff XPlanar mover using a custom stereovision tracking system.
 
-![Beckhoff XPlanar Mover Setup](images/xplanar-system.jpg)
+![Beckhoff XPlanar Mover Setup](images/xplanar-system.jpeg)
 *Figure 1: The Beckhoff XPlanar system featuring floating magnetic movers.*
 ---
 
@@ -20,7 +20,7 @@ The physical and software architecture relies on tight integration between indus
 * **Hardware Component:** A custom-built, rigid frame mounted with precise LED markers to facilitate high-contrast detection.
 * **Vision Acquisition:** Stereovision algorithms executed via **TwinCAT Vision**, processing dual-camera inputs directly on the industrial PC (IPC).
 
-![Stereovision Camera Tracking Setup](images/camera-setup.jpg)
+![Stereovision Camera Tracking Setup](images/camera-setup.jpeg)
 *Figure 2: Schematic configuration of the stereovision tracking system and spatial calibration setup.*
 
 ---
