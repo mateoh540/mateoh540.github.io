@@ -7,7 +7,7 @@ title: Beckhoff XPlanar 6DOF Position Measurement Tool
 The primary objective of this project is to measure the 6-Degrees-of-Freedom (6DOF) pose of a Beckhoff XPlanar mover using a custom stereovision tracking system.
 
 <p align="center">
-  <img src="./mateoh540.github.io/images/xplanar-system.png" width="220" alt="XPlanar System">
+  <img src="../mateoh540.github.io/images/xplanar-system.png" width="220" alt="XPlanar System">
 </p>
 
 *Figure 1: LED Frame Mounted on the XPlanar Mover.*
@@ -24,7 +24,7 @@ The physical and software architecture relies on tight integration between indus
 * **Vision Acquisition:** Stereovision algorithms executed via **TwinCAT Vision**, processing dual-camera inputs directly on the industrial PC (IPC).
 
 <p align="center">
-  <img src="./mateoh540.github.io/images/camera-setup.png" width="220" alt="Camera Setup">
+  <img src="../mateoh540.github.io/images/camera-setup.png" width="220" alt="Camera Setup">
 </p>
 *Figure 2: Full Stereovision Camera Setup.*
 
