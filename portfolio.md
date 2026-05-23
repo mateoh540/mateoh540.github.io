@@ -1,5 +1,5 @@
-# Mateo Huster
-#### Engineering Portfolio
+# Engineering Project Portfolio
+#### Mateo Huster
 ---
 
 ## About Me
@@ -38,6 +38,6 @@ This portfolio showcases engineering projects completed through personal work, r
 
 ## Contact
 
-- [LinkedIn](www.linkedin.com/in/mateo-huster)
+- [LinkedIn](https://www.linkedin.com/in/mateo-huster)
 - [GitHub](https://github.com/mateoh540)
-- [Email](mateo@huster.ca)
+- [Email](mailto:mateo@huster.ca)
