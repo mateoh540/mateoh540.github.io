@@ -24,7 +24,7 @@ The physical and software architecture relies on tight integration between indus
 * **Vision Acquisition:** Stereovision algorithms executed via **TwinCAT Vision**, processing dual-camera inputs directly on the industrial PC (IPC).
 
 <p align="center">
-  <img src="../mateoh540.github.io/images/camera-setup.png" width="220" alt="Camera Setup">
+  <img src="../mateoh540.github.io/images/camera-setup-blur.jpeg" width="220" alt="Camera Setup">
 </p>
 *Figure 2: Full Stereovision Camera Setup.*
 
