@@ -1,7 +1,3 @@
-# Engineering Project Portfolio
-#### Mateo Huster
----
-
 ## About Me
 
 <p align="center">
