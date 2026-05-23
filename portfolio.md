@@ -1,4 +1,3 @@
-## About Me
 
 <p align="center">
   <img src="images/outdoors_headshot.png" width="220" alt="Mateo Huster Headshot">
