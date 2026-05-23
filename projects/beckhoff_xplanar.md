@@ -10,7 +10,7 @@ The primary objective of this project is to measure the 6-Degrees-of-Freedom (6D
   <img src="xplanar-system.jpeg" width="220" alt="XPlanar System">
 </p>
 
-*Figure 1: The Beckhoff XPlanar system featuring floating magnetic movers.*
+*Figure 1: LED Frame Mounted on the XPlanar Mover.*
 ---
 
 ## Imlementation
@@ -26,7 +26,7 @@ The physical and software architecture relies on tight integration between indus
 <p align="center">
   <img src="camera-setup.jpeg" width="220" alt="Camera Setup">
 </p>
-*Figure 2: Schematic configuration of the stereovision tracking system and spatial calibration setup.*
+*Figure 2: Full Stereovision Camera Setup.*
 
 ---
 
