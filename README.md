@@ -1,10 +1,5 @@
-# My Project Portfolio
-## Table of Contents
-- [About](#about)
-- [Projects](#projects)
-
 ## About
-BASc in Mathematics and Engineering from Queen's University (2026)
+My name is Mateo Huster, I graduated with a BASc in Mathematics and Engineering from Queen's University (2026). This is a showcase of projects I have completed personally and through internshi[p oppurtunities.
 
 ## Projects
 - [XPlanar Stereovision](projects/beckhoff_xplanar.md)
