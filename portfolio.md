@@ -20,13 +20,14 @@ This portfolio showcases engineering projects completed through personal work, r
 
 ## Featured Projects
 
+### 🧪 Medical Devices
+
+- [Type 1 Diabetes Dashboard](projects/t1-dashboard.md)
+  Physical Dashboard representing Continuous Glucose Monitor Data.
+
 ### 🚀 Robotics & Vision Systems
 - [XPlanar Stereovision](projects/beckhoff_xplanar.md)  
   Real-time stereovision system for object tracking and pose estimation using industrial cameras and Beckhoff XPlanar.
-
-### 🧪 Data & Analysis
-- [FLS Analysis](projects/cellula_fls.md)  
-  Signal processing and analysis workflows for fluorescence lifetime spectroscopy data.
 
 ### ⚙️ Automation & Manufacturing
 - [PiSO Mounter](projects/astera_piso.md)  
