@@ -3,7 +3,7 @@ layout: default
 title: Mateo Huster | Engineering Project Portfolio
 ---
 <p align="center">
-  <img src="images/outdoors_headshot.png" width="220" alt="Mateo Huster Headshot">
+  <img src="images/outdoors_headshot.png" width="500" alt="Mateo Huster Headshot">
 </p>
 
 
