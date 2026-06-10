@@ -1,2 +1,2 @@
-theme: jekyll-theme-primer # Or whatever default theme you are using
+theme: jekyll-theme-cayman
 include: [_config.yml]
