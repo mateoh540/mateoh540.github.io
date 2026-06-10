@@ -23,7 +23,7 @@ This portfolio showcases engineering projects completed through personal work, r
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
 
   <a href="projects/t1-dashboard.md" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.2s; display: block;">
-    <img src="images/t1_dashboard_thumb.png" alt="Type 1 Diabetes Dashboard" style="width: 100%; height: 180px; object-fit: cover;">
+    <img src="images/t1dashboard_photo.jpeg" alt="Type 1 Diabetes Dashboard" style="width: 100%; height: 180px; object-fit: cover;">
     <div style="padding: 15px;">
       <h3 style="margin-top: 0;">Type 1 Diabetes Dashboard</h3>
       <p style="font-size: 0.9em; color: #555;">Physical dashboard representing Continuous Glucose Monitor data.</p>
@@ -31,20 +31,14 @@ This portfolio showcases engineering projects completed through personal work, r
   </a>
 
   <a href="projects/beckhoff_xplanar.md" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.2s; display: block;">
-    <img src="images/xplanar_thumb.png" alt="XPlanar Stereovision" style="width: 100%; height: 180px; object-fit: cover;">
+    <img src="images/xplanar_system.png" alt="XPlanar Stereovision" style="width: 100%; height: 180px; object-fit: cover;">
     <div style="padding: 15px;">
       <h3 style="margin-top: 0;">XPlanar Stereovision</h3>
       <p style="font-size: 0.9em; color: #555;">Real-time stereovision system for object tracking and pose estimation.</p>
     </div>
   </a>
 
-  <a href="projects/astera_piso.md" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.2s; display: block;">
-    <img src="images/piso_thumb.png" alt="PiSO Mounter" style="width: 100%; height: 180px; object-fit: cover;">
-    <div style="padding: 15px;">
-      <h3 style="margin-top: 0;">PiSO Mounter</h3>
-      <p style="font-size: 0.9em; color: #555;">Automated mounting and integration system for production workflows.</p>
-    </div>
-  </a>
+  
 
 </div>
 
