@@ -13,7 +13,8 @@ I graduated from Queen's University with the BASc in Mathematics and Engineering
 - Computer Vision
 - Robotics & Automation
 - Embedded Systems
-- AI & Intelligent Systems  
+- AI & Intelligent Systems
+
 This portfolio showcases engineering projects completed through personal work, research, and internship opportunities.
 
 ---
