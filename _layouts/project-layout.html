@@ -14,7 +14,8 @@
       color: #606c71; /* Cayman body text color */
       background-color: #fff;
       margin: 0;
-      padding: 40px 20px;
+      /* Reduced side padding from 20px to 10px for maximum horizontal space on smaller screens */
+      padding: 40px 10px; 
       font-size: 16px;
     }
 
@@ -48,7 +49,7 @@
   </style>
 </head>
 <body>
-  <div style="max-width: 64rem; margin: 0 auto;">
+  <div style="max-width: 64rem; margin: 0 auto; width: 100%;">
     <a href="../" class="back-link">← Back to Portfolio</a>
     {{ content }}
   </div>
