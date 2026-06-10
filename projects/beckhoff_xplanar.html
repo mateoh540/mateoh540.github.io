@@ -1,49 +1,65 @@
 ---
 layout: default
-title: Beckhoff XPlanar 6DOF Position Measurement Tool
+title: Type 1 Diabetes Dashboard
 ---
 
-<p style="font-size: 1.15em; color: #555; margin-bottom: 30px;">
-  A custom stereovision tracking system designed to measure the 6-Degrees-of-Freedom (6DOF) pose of a Beckhoff XPlanar mover in real time.
-</p>
+<div style="max-width: 1300px; margin: 0 auto; padding: 0 20px;">
+  
+  <p style="font-size: 1.15em; color: #555; margin-bottom: 30px;">
+    A custom, dual-layer printed circuit board (PCB) designed to interface an ESP32 DevKit V1 microcontroller with an external 7-segment display module and status indicator LEDs.
+  </p>
 
-<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+  <div style="display: flex; flex-wrap: wrap; gap: 45px; align-items: flex-start;">
 
-  <div style="flex: 1; min-width: 300px;">
+    <div style="flex: 1; min-width: 320px;">
 
-    <h2 style="margin-top: 0;">🎯 Objectives</h2>
-    <p>The primary objective of this project is to measure the 6DOF pose of a Beckhoff XPlanar mover using a custom stereovision tracking system. To preserve strict real-time compatibility and avoid external hardware bottlenecks, all computer vision and estimation algorithms are developed and executed directly within the <strong>TwinCAT PLC</strong> environment.</p>
+      <h2 style="margin-top: 0;">⚙️ Technical Specifications & Features</h2>
+      <ul style="padding-left: 20px;">
+        <li style="margin-bottom: 10px;"><strong>Microcontroller Core:</strong> Driven by an ESP32 DevKit V1 (30-pin, 25.4mm wide variant).</li>
+        <li style="margin-bottom: 10px;"><strong>Display System:</strong> Interfaced with a multi-digit 7-segment display for real-time data streaming.</li>
+        <li style="margin-bottom: 10px;"><strong>Visual Telemetry:</strong> Triple LED status indicator subsystem configured for reliable current sourcing (High GPIO output triggers active state).</li>
+        <li style="margin-bottom: 10px;"><strong>Form Factor:</strong> Dual-layer copper layout optimized for tight-clearance desktop enclosures, incorporating corner mechanical mounting holes.</li>
+      </ul>
 
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
-    <h2>🏆 Outcomes & Contributions</h2>
-    <ul style="padding-left: 20px;">
-      <li style="margin-bottom: 10px;"><strong>Deterministic Integration:</strong> Minimizes communication latency between the vision system and the motion controllers, allowing the 6DOF data to be utilized efficiently in deterministic control loops.</li>
-      <li style="margin-bottom: 10px;"><strong>High-Precision Tracking:</strong> Achieves high-precision tracking metrics across all 6 degrees of freedom with micrometer precision in translational position and milliradian precision in rotational position.</li>
-    </ul>
+      <h2>🛠️ Engineering Challenges & Design Solutions</h2>
+      
+      <h3 style="font-size: 1.1em;">1. Component Tolerance & Footprint Modification</h3>
+      <p>Physical prototype dimension auditing with digital calipers revealed a 25.4mm (1.0 inch) row spacing discrepancy vs the standard 22.86mm library model. The footprint was directly modified in KiCad's Footprint Editor by geometrically shifting the 15-pin rows by exactly ±1.27mm using precise delta-move transformations.</p>
 
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+      <h3 style="font-size: 1.1em;">2. Signal Routing & Clearance Optimization</h3>
+      <p>Widening the core footprint compressed routing channels beneath the display module. Track paths were re-routed around the outer boundaries of resistor pads to eliminate copper overlaps, and spacing was dynamically adjusted to maintain clearance around adjacent ESP32 header rows, ensuring a 0-error Design Rule Check (DRC).</p>
 
-    <h2>⚙️ Technical Details & Skills</h2>
-    <p>The physical and software architecture relies on tight integration between industrial hardware and native TwinCAT libraries:</p>
-    <ul style="padding-left: 20px;">
-      <li style="margin-bottom: 10px;"><strong>TwinCAT Vision & PLC:</strong> Stereovision algorithms executed directly within the TwinCAT environment, processing dual-camera inputs on the industrial PC (IPC).</li>
-      <li style="margin-bottom: 10px;"><strong>Hardware & Mechatronics:</strong> A custom-built, rigid frame mounted with precise LED markers to facilitate high-contrast detection.</li>
-      <li style="margin-bottom: 10px;"><strong>Skills Utilized:</strong> Embedded Computer Vision, Real-Time Systems, Industrial Automation (Beckhoff TwinCAT), Spatial Kinematics, Hardware Integration.</li>
-    </ul>
+      <h3 style="font-size: 1.1em;">3. Diode Polarity & Netlist Synchronization</h3>
+      <p>To keep firmware execution intuitive (driving GPIO lines high to illuminate indicators), the netlist was synchronized to orient the LED anodes directly downstream from resistors. Footprints were physically rotated 180° on the canvas, aligning silkscreen markings with the physical cathodes sinking straight into the solid Ground copper pour.</p>
 
-  </div>
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
-  <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 25px;">
+      <h2>🧰 Core Tools Used</h2>
+      <ul style="padding-left: 20px;">
+        <li style="margin-bottom: 5px;"><strong>KiCad 8.0:</strong> Schematic Editor, PCB Layout Canvas, Footprint Editor, 3D Viewer.</li>
+        <li style="margin-bottom: 5px;"><strong>Validation:</strong> KiCad Design Rule Checker (DRC) for track clearance and net compliance.</li>
+        <li style="margin-bottom: 5px;"><strong>Hardware:</strong> Digital calipers for prototype dimension verification.</li>
+      </ul>
 
-    <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
-      <img src="../images/xplanar-system.png" alt="XPlanar System" style="width: 100%; height: auto; border-radius: 4px;">
-      <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Figure 1: LED Frame Mounted on the XPlanar Mover.</p>
     </div>
 
-    <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
-      <img src="../images/camera-setup-blur.jpeg" alt="Camera Setup" style="width: 100%; height: auto; border-radius: 4px;">
-      <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Figure 2: Full Stereovision Camera Setup.</p>
+    <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 25px;">
+
+      <div style="border: 1px solid #eee; border-radius: 6px; padding: 14px; background: #fafafa; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <img src="../images/esp32_pcb_top.png" alt="ESP32 Smart Display Shield PCB Layout" style="width: 100%; height: auto; border-radius: 4px;">
+        <p style="margin: 10px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Figure 1: Top-down view of the finalized dual-layer layout showing clean horizontal routing and copper tracking.</p>
+      </div>
+
+      <div style="border: 1px solid #eee; border-radius: 6px; padding: 14px; background: #fafafa; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <video style="width: 100%; height: auto; border-radius: 4px;" controls poster="../images/video_thumbnail.png">
+          <source src="../images/esp32_shield_demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p style="margin: 10px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Video 1: Hardware validation and real-time 7-segment display streaming demo.</p>
+      </div>
+
     </div>
 
   </div>
