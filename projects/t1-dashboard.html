@@ -1,46 +1,63 @@
-# ESP32 Smart Display Shield
-
-A custom, dual-layer printed circuit board (PCB) designed to interface an ESP32 DevKit V1 microcontroller with an external 7-segment display module and status indicator LEDs. This project involved full-cycle hardware development, moving from initial schematic capture and circuit design to physical footprint modification, board routing, and design rule optimization within KiCad.
-
+---
+layout: default
+title: Type 1 Diabetes Dashboard
 ---
 
-## Technical Specifications & Features
+<p style="font-size: 1.15em; color: #555; margin-bottom: 30px;">
+  A custom, dual-layer printed circuit board (PCB) designed to interface an ESP32 DevKit V1 microcontroller with an external 7-segment display module and status indicator LEDs.
+</p>
 
-- **Microcontroller Core:** Driven by an ESP32 DevKit V1 (30-pin, 25.4mm wide variant).
-- **Display System:** Interfaced with a multi-digit 7-segment display for real-time data streaming.
-- **Visual Telemetry:** Triple LED status indicator subsystem configured for reliable current sourcing (High GPIO output triggers active state).
-- **Form Factor & Layer Stack:** Dual-layer copper layout optimized for tight-clearance desktop enclosures, incorporating corner mechanical mounting holes for stable deployment.
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
 
----
+  <div style="flex: 1; min-width: 300px;">
 
-## Engineering Challenges & Design Solutions
+    <h2 style="margin-top: 0;">⚙️ Technical Specifications & Features</h2>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 10px;"><strong>Microcontroller Core:</strong> Driven by an ESP32 DevKit V1 (30-pin, 25.4mm wide variant).</li>
+      <li style="margin-bottom: 10px;"><strong>Display System:</strong> Interfaced with a multi-digit 7-segment display for real-time data streaming.</li>
+      <li style="margin-bottom: 10px;"><strong>Visual Telemetry:</strong> Triple LED status indicator subsystem configured for reliable current sourcing (High GPIO output triggers active state).</li>
+      <li style="margin-bottom: 10px;"><strong>Form Factor:</strong> Dual-layer copper layout optimized for tight-clearance desktop enclosures, incorporating corner mechanical mounting holes.</li>
+    </ul>
 
-### 1. Component Tolerance & Footprint Modification
-A primary challenge during the layout phase was adapting to variant discrepancies common among development boards. Initial footprints utilized standard $22.86\text{mm}$ ($0.9\text{ inch}$) row spacing. After physical evaluation of the target hardware, a $25.4\text{mm}$ ($1.0\text{ inch}$) row-to-row spacing discrepancy was identified. 
-Instead of introducing untested library dependencies, the footprint was directly modified in the Footprint Editor by geometrically shifting the 15-pin rows by exactly $\pm1.27\text{mm}$ using precise delta-move transformations.
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
-### 2. Signal Routing & Clearance Optimization
-Widening the core microcontroller footprint compressed the routing channels running beneath the central display module and nearby passive components. This required a full optimization pass to prevent manufacturing defects:
-- Track paths were re-routed around the outer boundaries of resistor pads (such as `R10`) to eliminate copper overlaps.
-- Resistor spacing was dynamically adjusted to maintain clearance around adjacent ESP32 header rows (`J3`), ensuring a zero-error feedback loop from the Design Rule Checker (DRC).
+    <h2>🛠️ Engineering Challenges & Design Solutions</h2>
+    
+    <h3 style="font-size: 1.1em;">1. Component Tolerance & Footprint Modification</h3>
+    <p>Physical prototype dimension auditing with digital calipers revealed a 25.4mm (1.0 inch) row spacing discrepancy vs the standard 22.86mm library model. The footprint was directly modified in KiCad's Footprint Editor by geometrically shifting the 15-pin rows by exactly ±1.27mm using precise delta-move transformations.</p>
 
-### 3. Diode Polarity & Netlist Synchronization
-To keep firmware execution intuitive (driving GPIO lines high to illuminate status indicators), the schematic and board netlist were completely synchronized to orient the LED anodes (`Pin 2`) directly downstream from the current-limiting resistors. Footprints were physically rotated $180^\circ$ on the canvas, aligning the internal flat edges of the silkscreen markings with the physical cathodes (`Pin 1`) sinking straight into the solid Ground copper pour.
+    <h3 style="font-size: 1.1em;">2. Signal Routing & Clearance Optimization</h3>
+    <p>Widening the core footprint compressed routing channels beneath the display module. Track paths were re-routed around the outer boundaries of resistor pads to eliminate copper overlaps, and spacing was dynamically adjusted to maintain clearance around adjacent ESP32 header rows, ensuring a 0-error Design Rule Check (DRC).</p>
 
----
+    <h3 style="font-size: 1.1em;">3. Diode Polarity & Netlist Synchronization</h3>
+    <p>To keep firmware execution intuitive (driving GPIO lines high to illuminate indicators), the netlist was synchronized to orient the LED anodes directly downstream from resistors. Footprints were physically rotated 180° on the canvas, aligning silkscreen markings with the physical cathodes sinking straight into the solid Ground copper pour.</p>
 
-## Core Tools Used
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
-- **EDA Software:** KiCad 8.0 (Schematic Editor, PCB Layout Canvas, Footprint Editor, 3D Viewer)
-- **Validation:** KiCad Design Rule Checker (DRC) for track clearance, net compliance, and manufacturing constraint verification.
-- **Hardware Tools:** Digital calipers for physical prototype dimension auditing.
+    <h2>🧰 Core Tools Used</h2>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 5px;"><strong>KiCad 8.0:</strong> Schematic Editor, PCB Layout Canvas, Footprint Editor, 3D Viewer.</li>
+      <li style="margin-bottom: 5px;"><strong>Validation:</strong> KiCad Design Rule Checker (DRC) for track clearance and net compliance.</li>
+      <li style="margin-bottom: 5px;"><strong>Hardware:</strong> Digital calipers for prototype dimension verification.</li>
+    </ul>
 
----
+  </div>
 
-## Design Gallery
+  <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 25px;">
 
-### Schematic Layout
-*Clean netlist distribution showing the ESP32 GPIO channels, current-limiting resistors, properly oriented diode anodes, and integrated "No-Connection" safety flags to suppress floating pin noise.*
+    <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
+      <img src="../images/t1dashboard_photo.jpeg" alt="ESP32 Smart Display Shield PCB Layout" style="width: 100%; height: auto; border-radius: 4px;">
+      <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Figure 1: Top-down view of the finalized dual-layer layout showing clean horizontal routing and copper tracking.</p>
+    </div>
 
-### 2D Copper Tracking & Silkscreen
-*Top-down view of the finalized dual-layer layout showing clean horizontal routing, thermal-relief spokes on ground plane connections, and white F.Silkscreen reference text alignment.*
+    <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
+      <video style="width: 100%; height: auto; border-radius: 4px;" controls poster="../images/video_thumbnail.png">
+        <source src="../images/t1dashboard_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Video 1: Hardware validation and real-time 7-segment display streaming demo.</p>
+    </div>
+
+  </div>
+
+</div>
