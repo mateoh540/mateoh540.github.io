@@ -9,12 +9,19 @@ title: Mateo Huster | Engineering Project Portfolio
 
 ## About Me
 
-I graduated from Queen's University with the BASc in Mathematics and Engineering, specializing in Systems and Robotics. I'm interested in the field of medical robotics and devices, looking to make an impact on peoples lives in health care using engineering innovation. Broadly, my interestes are:
+I graduated from Queen's University with the BASc in Mathematics and Engineering, specializing in Systems and Robotics. I'm interested in the field of medical robotics and devices, looking to make an impact on peoples lives in healthcare using engineering innovation. Broadly, my interestes are:
 - Computer Vision
 - Robotics & Automation
 - Embedded Systems
 - AI & Intelligent Systems
 This portfolio showcases engineering projects completed through personal work, research, and internship opportunities.
+
+---
+
+## Contact Information
+- [Email](mailto:mateo@huster.ca)
+- [LinkedIn](https://www.linkedin.com/in/mateo-huster)
+- [GitHub](https://github.com/mateoh540)
 
 ---
 
@@ -42,10 +49,3 @@ This portfolio showcases engineering projects completed through personal work, r
 
 </div>
 
----
-
-## Contact
-
-- [LinkedIn](https://www.linkedin.com/in/mateo-huster)
-- [GitHub](https://github.com/mateoh540)
-- [Email](mailto:mateo@huster.ca)
