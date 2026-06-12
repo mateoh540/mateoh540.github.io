@@ -3,10 +3,6 @@ layout: project-layout
 title: Type 1 Diabetes Dashboard
 ---
 
-<p style="font-size: 1.15em; color: #555; margin-bottom: 30px;">
-  A custom, dual-layer printed circuit board (PCB) designed to interface an ESP32 DevKit V1 microcontroller with an external 7-segment display module and status indicator LEDs.
-</p>
-
 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
 
   <div style="flex: 1; min-width: 300px;">
@@ -19,22 +15,31 @@ title: Type 1 Diabetes Dashboard
     <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
     
     <h2> Outcomes and Contributions </h2>
-    <h3 style="font-size: 1.1em;">1. Component Tolerance & Footprint Modification</h3>
-    <p>Physical prototype dimension auditing with digital calipers revealed a 25.4mm (1.0 inch) row spacing discrepancy vs the standard 22.86mm library model. The footprint was directly modified in KiCad's Footprint Editor by geometrically shifting the 15-pin rows by exactly ±1.27mm using precise delta-move transformations.</p>
-
-    <h3 style="font-size: 1.1em;">2. Signal Routing & Clearance Optimization</h3>
-    <p>Widening the core footprint compressed routing channels beneath the display module. Track paths were re-routed around the outer boundaries of resistor pads to eliminate copper overlaps, and spacing was dynamically adjusted to maintain clearance around adjacent ESP32 header rows, ensuring a 0-error Design Rule Check (DRC).</p>
-
-    <h3 style="font-size: 1.1em;">3. Diode Polarity & Netlist Synchronization</h3>
-    <p>To keep firmware execution intuitive (driving GPIO lines high to illuminate indicators), the netlist was synchronized to orient the LED anodes directly downstream from resistors. Footprints were physically rotated 180° on the canvas, aligning silkscreen markings with the physical cathodes sinking straight into the solid Ground copper pour.</p>
+    <h3 style="font-size: 1.1em;"> Bluetooth Communication with Dexcom G7</h3>
+    <p> Established Bluetooth communication with Dexcom G7 device to fetch glucose monitor data including the reading, trend, and timestamp</p>
+    <h3 style="font-size: 1.1em;"> Concise Data Visualization</h3>
+    <p> Used 7-segment disply, OLED display and LEDs to display the current reading, the trend, time since the reading, and a status indicating in-range (green), high (yellow), and low (red)</p>
+    <h3 style="font-size: 1.1em;"> Custom PCB Design</h3>
+    <p> Designed a custom PCB after protptyping to orient components as desired and safeguard electrical connections</p>
+    <h3 style="font-size: 1.1em;"> Encasing Designed with CAD</h3>
+    <p> Designed an encasing for the device using CAD tools for presentability.</p>
 
     <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
     <h2> Technical Details and Skills </h2>
+    <h3> Components </h3>
     <ul style="padding-left: 20px;">
-      <li style="margin-bottom: 5px;"><strong>KiCad 8.0:</strong> Schematic Editor, PCB Layout Canvas, Footprint Editor, 3D Viewer.</li>
-      <li style="margin-bottom: 5px;"><strong>Validation:</strong> KiCad Design Rule Checker (DRC) for track clearance and net compliance.</li>
-      <li style="margin-bottom: 5px;"><strong>Hardware:</strong> Digital calipers for prototype dimension verification.</li>
+      <li style="margin-bottom: 5px;"><strong>ESP32 DevKit V1:</strong> 32-pin Microcontroller with WiFi and Bluetooth Capabilities.</li>
+      <li style="margin-bottom: 5px;"><strong>5461AS 7-Segment Display :</strong> 4 Digit 7-Segment Display.</li>
+      <li style="margin-bottom: 5px;"><strong>SSD1306 OLED Display:</strong> 0.96 inch OLED display.</li>
+      <li style="margin-bottom: 5px;"><strong>Colour LEDs:</strong> Basic colour LEDs.</li>
+    </ul>
+
+    <h3> Tools</h3>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 5px;"><strong>KiCad:</strong> Schematic Editor, PCB Layout Canvas, Footprint Editor, 3D Viewer.</li>
+      <li style="margin-bottom: 5px;"><strong>AutoDesk Fusion:</strong> Encasing CAD Design.</li>
+      <li style="margin-bottom: 5px;"><strong>Git:</strong> Version Control.</li>
     </ul>
 
   </div>
