@@ -11,18 +11,14 @@ title: Type 1 Diabetes Dashboard
 
   <div style="flex: 1; min-width: 300px;">
 
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+    
     <h2 style="margin-top: 0;"> Objectives </h2>
-    <ul style="padding-left: 20px;">
-      <li style="margin-bottom: 10px;"><strong>Microcontroller Core:</strong> Driven by an ESP32 DevKit V1 (30-pin, 25.4mm wide variant).</li>
-      <li style="margin-bottom: 10px;"><strong>Display System:</strong> Interfaced with a multi-digit 7-segment display for real-time data streaming.</li>
-      <li style="margin-bottom: 10px;"><strong>Visual Telemetry:</strong> Triple LED status indicator subsystem configured for reliable current sourcing (High GPIO output triggers active state).</li>
-      <li style="margin-bottom: 10px;"><strong>Form Factor:</strong> Dual-layer copper layout optimized for tight-clearance desktop enclosures, incorporating corner mechanical mounting holes.</li>
-    </ul>
+    <p> The objective of this project was to provide a physical dashboard representing Dexcom CGM data and status. The benefit of such a device is convenient visualization of glucose data, which otherwise requires opening your phone and then app. </p>
 
     <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
-
-    <h2> Outcomes and Contributions </h2>
     
+    <h2> Outcomes and Contributions </h2>
     <h3 style="font-size: 1.1em;">1. Component Tolerance & Footprint Modification</h3>
     <p>Physical prototype dimension auditing with digital calipers revealed a 25.4mm (1.0 inch) row spacing discrepancy vs the standard 22.86mm library model. The footprint was directly modified in KiCad's Footprint Editor by geometrically shifting the 15-pin rows by exactly ±1.27mm using precise delta-move transformations.</p>
 
