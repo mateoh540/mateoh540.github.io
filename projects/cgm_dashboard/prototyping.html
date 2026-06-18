@@ -1,1 +1,54 @@
-Prototyping with breadboard, developing the code
+---
+layout: project-layout
+title: Type 1 Diabetes Dashboard
+---
+
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+
+  <div style="flex: 1; min-width: 300px;">
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+    
+    <h2 style="margin-top: 0;"> Objectives </h2>
+    <p> The objective of this project was to provide a physical dashboard representing Dexcom CGM data and status. The benefit of such a device is convenient visualization of glucose data, which otherwise requires opening your phone and then app. </p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+    
+    <h2> Outcomes and Contributions </h2>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 5px;"><strong>Bluetooth Communication with Dexcom G7:</strong> Established Bluetooth communication with Dexcom G7 device to fetch glucose monitor data including the reading, trend, and timestamp.</li>
+      <li style="margin-bottom: 5px;"><strong>Concise Data Visualization:</strong> Used 7-segment disply, OLED display and LEDs to display the current reading, the trend, time since the reading, and a status indicating in-range (green), high (yellow), and low (red).</li>
+      <li style="margin-bottom: 5px;"><strong>Custom PCB Design:</strong> Designed a custom PCB after protptyping to orient components as desired and safeguard electrical connections.</li>
+      <li style="margin-bottom: 5px;"><strong>Encasing Designed with CAD:</strong> Designed an encasing for the device using CAD tools for presentability.</li>
+    </ul>
+    
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+
+    <h2> Technical Details and Skills </h2>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 5px;"><strong>Hardware Components:</strong> ESP32 DevKit V1, 4 Digit 7-Segment Display, 0.96 inch OLED display, Basic colour LEDs.</li>
+      <li style="margin-bottom: 5px;"><strong>Tools:</strong> KiCad, AutoDesk Fusion, Git.</li>
+    </ul>
+
+  </div>
+
+  <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 25px;">
+
+    <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
+      <img src="../images/t1dashboard_photo.jpeg" alt="ESP32 Smart Display Shield PCB Layout" style="width: 100%; height: auto; border-radius: 4px;">
+      <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Figure 1: Top-down view of the finalized dual-layer layout showing clean horizontal routing and copper tracking.</p>
+    </div>
+
+    <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
+      <video style="width: 100%; height: auto; border-radius: 4px;" controls poster="../images/video_thumbnail.png">
+        <source src="../images/t1dashboard_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Video 1: Hardware validation and real-time 7-segment display streaming demo.</p>
+    </div>
+
+    <href> mateoh540.github.io/cgm_dashboard/prototyping </href>
+
+  </div>
+
+</div>
