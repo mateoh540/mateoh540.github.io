@@ -38,7 +38,7 @@ This portfolio showcases engineering projects completed through personal work, r
     </div>
   </a>
 
-  <a href="projects/6dof_measurement_tool/introduction.html" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.2s; display: block;">
+  <a href="projects/6dof_measurement_tool/overview.html" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.2s; display: block;">
     <img src="/projects/6dof_measurement_tool/xplanar-system.png" alt="XPlanar Stereovision" style="width: 100%; height: 180px; object-fit: cover;">
     <div style="padding: 15px;">
       <h3 style="margin-top: 0;">6D Position Measurement for XPlanar </h3>
