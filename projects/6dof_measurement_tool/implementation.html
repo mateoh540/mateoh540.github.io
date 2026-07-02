@@ -1,0 +1,40 @@
+---
+layout: project-layout
+title: Algorithm Implementation
+---
+
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+
+    <div style="flex: 1; min-width: 300px;">
+
+        <a href="https://mateoh540.github.io/projects/6dof_measurement_tool/overview.html" class="back-link">← Back to Overview</a>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+        
+        <h2 style="margin-top: 0;"> PCB Design </h2>
+        <p> 
+            To preserve real-time compatibility and avoid external hardware bottlenecks, 
+            all computer vision and estimation algorithms were developed and executed directly 
+            within the TwinCAT PLC environment.
+        </p>  
+        <p>
+            Stereo vision algorithms were implemented to process position of four LED targets mounted on the Xplanar mover.
+            The positions from both cameras and the rotation matrix from the camera calibration yields the 3D positions
+            of each LED target using triangulation. This information can then be used to calculate the 6D position of the XPlanar mover.
+        </p>
+        <p>
+            Image processing was performed using the TwinCAT vision library including thresholding, blob detection
+            and contour detection. Blurring and image filtng were also used to reduce noise and improve detection accuracy. 
+        </p>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+    </div>
+        
+    <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 25px;">
+        <div style="border: 1px solid #eee; border-radius: 6px; padding: 12px; background: #fafafa; text-align: center;">
+            <img src="stereovision.jpg" alt="ESP32 Smart Display Shield PCB Layout" style="width: 100%; height: auto; border-radius: 4px;">
+            <p style="margin: 8px 0 0 0; font-size: 0.85em; color: #666; font-style: italic;">Figure 1: Stereovision Diagram.</p>
+        </div>
+    </div>
+
+</div>
